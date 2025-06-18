@@ -6,10 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/5c4a0b1cae.js" crossorigin="anonymous"></script>
   <link href="./output.css" rel="stylesheet">
+
   <script>
+    // for navbar on mobile
     function toggleMenu() {
       document.getElementById('nav-items').classList.toggle('hidden');
     }
+
+    // for progress bar tracking
+    const slider = document.getElementById("progress-bar");
+
+    function updateProgressFill() {
+      const percent = (slider.value / slider.max) * 100;
+      slider.style.setProperty('--range-progress', `${percent}%`);
+    }
+
+    slider.addEventListener("input", updateProgressFill);
+    updateProgressFill();
   </script>
 </head>
 
@@ -17,7 +30,7 @@
 
   <!-- navbar section -->
 
-  <nav class="bg-black py-3 px-4">
+  <nav class="fixed w-full bg-black py-3 px-4">
     <div class="flex items-center justify-between sm:hidden">
       <button onclick="toggleMenu()" class="text-white text-2xl">
         <i class="fa-solid fa-bars"></i>
@@ -25,8 +38,7 @@
       <img src="./assets/ansh.png" alt="profile" class="h-9 w-9 rounded-full">
     </div>
 
-    <ul id="nav-items"
-      class="flex flex-wrap items-center sm:flex sm:flex-nowrap sm:items-center sm:space-x-0 hidden">
+    <ul id="nav-items" class="flex-wrap items-center sm:flex sm:flex-nowrap sm:items-center sm:space-x-0 hidden">
 
       <!-- Menu Icon -->
       <li
@@ -51,8 +63,12 @@
         <ul class="flex flex-wrap sm:flex-nowrap items-center justify-end gap-y-2">
 
           <li
-            class="text-white bg-[#1f1f1f] text-[22px] rounded-full px-[12px] py-[8px] hover:bg-[#2a2a2a] hover:text-white transform transition-transform duration-200 hover:scale-105">
+            class="group text-white bg-[#1f1f1f] text-[22px] rounded-full px-[12px] py-[8px] hover:bg-[#2a2a2a] hover:text-white transform transition-transform duration-200 hover:scale-105">
             <i class="fa-solid fa-house"></i>
+            <span
+              class="absolute top-full mt-2 left-1/2 -translate-x-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+              Home
+            </span>
           </li>
 
           <!-- Search -->
@@ -62,7 +78,8 @@
               <input type="text" placeholder="What do you want to play&#63;"
                 class="ml-3 bg-transparent outline-none text-white">
               <i
-                class="fa-regular fa-window-restore text-[#d1d1d1] text-[20px] ml-45 border-l-1 pl-3 hover:text-white transform transition-transform duration-200 hover:scale-110"></i>
+                class="fa-regular fa-window-restore text-[#d1d1d1] text-[20px] ml-45 border-l-1 pl-3 hover:text-white transform transition-transform duration-200 hover:scale-110">
+              </i>
             </div>
           </li>
 
@@ -76,19 +93,33 @@
 
           <!-- Notification Icons -->
           <li
-            class="text-[#d1d1d1] hover:text-white ml-5.5 transform transition-transform duration-200 hover:scale-105">
+            class="group text-[#d1d1d1] hover:text-white ml-5.5 transform transition-transform duration-200 hover:scale-105">
             <i class="fa-solid fa-bell"></i>
+            <span
+              class="absolute top-full mt-2 left-1/2 -translate-x-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+              What's New
+            </span>
           </li>
 
           <li
-            class="text-[#d1d1d1] hover:text-white ml-5.5 transform transition-transform duration-200 hover:scale-105">
+            class="group text-[#d1d1d1] hover:text-white ml-5.5 transform transition-transform duration-200 hover:scale-105">
             <i class="fa-solid fa-people-group"></i>
+            <span
+              class="absolute top-full mt-2 left-1/2 -translate-x-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+              Friend Activity
+            </span>
           </li>
 
           <!-- Profile -->
-          <li>
-            <img src="./assets/ansh.png" alt="profile photo"
-              class="h-9 w-9 bg-[#1f1f1f] text-[22px] rounded-full ml-5.5 hover:bg-[#2a2a2a] hover:text-white transform transition-transform duration-200 hover:scale-110">
+          <li class="group ml-[22px]">
+            <div
+              class="bg-[#1f1f1f] rounded-full hover:bg-[#2a2a2a] transform transition-transform duration-200 hover:scale-110">
+              <img src="./assets/ansh.png" alt="profile photo" class="h-9 w-9 rounded-full">
+              <span
+                class="absolute top-full mt-2 left-1/2 -translate-x-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+                Ansh Soni
+              </span>
+            </div>
           </li>
 
           <!-- Window Controls -->
@@ -108,6 +139,126 @@
     </ul>
   </nav>
 
+
+  <!-- footer section -->
+  <footer
+    class="flex items-center fixed bottom-0 w-full h-22 border-1 border-white bg-black text-white text-center px-4 pb-4 pt-6">
+
+    <!-- left sub section -->
+    <div class="flex flex-wrap items-center">
+      <!-- sample image -->
+      <div class="group">
+        <img src="./assets/sample1.png" alt="sample image" class="h-14 w-14 rounded-[4px]">
+        <span
+          class="absolute top-0 mt-[18px] left-0 ml-[39px] hidden group-hover:block rounded-full bg-[#2a2a2a] text-[#858585] text-sm px-2 py-1 whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10 hover:text-white transform hover:scale-110">
+          <i class="fa-solid fa-angle-down"></i>
+        </span>
+      </div>
+
+      <!-- text of sample image -->
+      <div class="ml-4">
+        <ul class="flex flex-col items-start">
+          <li class="text-white text-[15px] font-semibold hover:underline"><a href="#">Radha Ramanam Hare Hare</a></li>
+          <li class="text-[#858585] text-[13px] hover:text-white hover:underline"><a href="#">Indresh Upadhyay</a></li>
+        </ul>
+      </div>
+
+      <!-- add icon -->
+      <div class="group ml-5">
+        <i
+          class="fa-regular fa-square-plus text-[#858585] text-[19px] hover:text-white transform transition-transform duration-150 hover:scale-105">
+          <span
+            class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10 font-sans">
+            Add to Liked Songs
+          </span>
+        </i>
+      </div>
+    </div>
+
+    <!-- middle sub section -->
+    <div class="flex flex-col items-center">
+      <!-- top sub division -->
+      <div class="flex justify center min-w-max">
+        <ul class="flex flex-wrap items-center justify-center gap-x-6.5">
+          <li class="text-[#939393] text-[18px] hover:text-white transition-opacity duration-250 hover:scale-110">
+            <button class="group">
+              <i class="fa-solid fa-shuffle"></i>
+              <span
+                class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10 font-sans">
+                Shuffle
+              </span>
+            </button>
+          </li>
+          <li class="text-[#b3b3b3] text-[20px] hover:text-white transition-opacity duration-250 hover:scale-110">
+            <button class="group">
+              <i class="fa-solid fa-backward-step"></i>
+              <span
+                class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10 font-sans">
+                Previous
+              </span>
+            </button>
+          </li>
+
+          <li class="text-white text-[32px] transition-opacity duration-250 hover:scale-110">
+            <button class="group relative" onclick="
+      const iconhover = this.querySelector('i');
+      const tooltip = this.querySelector('span');
+      iconhover.classList.toggle('fa-circle-play');
+      iconhover.classList.toggle('fa-circle-pause');
+      tooltip.textContent = iconhover.classList.contains('fa-circle-play') ? 'Play' : 'Pause';
+    " onmouseover="
+      const icon = this.querySelector('i');
+      const tooltip = this.querySelector('span');
+      tooltip.textContent = icon.classList.contains('fa-circle-play') ? 'Play' : 'Pause';
+    ">
+              <i class="fa-solid fa-circle-play"></i>
+              <span
+                class="absolute bottom-full left-1/2 -translate-x-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10 font-sans">
+                Play
+              </span>
+            </button>
+          </li>
+
+          <li class="text-[#b3b3b3] text-[20px] hover:text-white transition-opacity duration-250 hover:scale-110">
+            <button class="group">
+              <i class="fa-solid fa-forward-step"></i>
+              <span
+                class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10 font-sans">
+                Next
+              </span>
+            </button>
+          </li>
+
+          <li class="text-[#939393] text-[18px] hover:text-white transition-opacity duration-250 hover:scale-110">
+            <button class="group">
+              <i class="fa-solid fa-repeat"></i>
+              <span
+                class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10 font-sans">
+                Repeat
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- bottom sub division -->
+      <div class="flex items-center justify-between w-xl px-4 bg-black text-white text-[11px] font-normal">
+        <!-- Start Time -->
+        <span id="start-time">11:50</span>
+
+        <!-- Slidable Progress Bar -->
+        <input type="range" id="progress-bar" min="0" max="100" value="65"
+          class="w-full mx-2 h-[4px] bg-transparent cursor-pointer" />
+
+        <!-- End Time -->
+        <span id="end-time">14:44</span>
+      </div>
+    </div>
+
+    <!-- right sub section -->
+    <div></div>
+
+  </footer>
 </body>
 
 </html>
