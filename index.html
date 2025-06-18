@@ -142,7 +142,7 @@
 
   <!-- footer section -->
   <footer
-    class="flex items-center fixed bottom-0 w-full h-22 border-1 border-white bg-black text-white text-center px-4 pb-4 pt-6">
+    class="flex items-center justify-between fixed bottom-0 w-full h-22 border-white bg-black text-white text-center px-4 pb-4 pt-6">
 
     <!-- left sub section -->
     <div class="flex flex-wrap items-center">
@@ -256,7 +256,75 @@
     </div>
 
     <!-- right sub section -->
-    <div></div>
+    <div class="flex flex-wrap items-center gap-x-3.5 text-[#a7a7a7]">
+      <!-- playing view -->
+      <div class="group border px-1 text-[11px] hover:text-white transition-opacity duration-250 hover:scale-105">
+        <i class="fa-solid fa-play"></i>
+        <span
+          class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10 font-sans">
+          Now playing view
+        </span>
+      </div>
+
+      <!-- Lyrics -->
+      <div class="group hover:text-white transition-opacity duration-250 hover:scale-105">
+        <i class="fa-solid fa-music"></i>
+        <span
+          class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10 font-sans">
+          Lyrics
+        </span>
+      </div>
+
+      <!-- Queue -->
+      <div class="group hover:text-white transition-opacity duration-250 hover:scale-105">
+        <i class="fa-solid fa-layer-group"></i>
+        <span
+          class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10 font-sans">
+          Queue
+        </span>
+      </div>
+
+      <!-- connect to device -->
+      <div class="group hover:text-white transition-opacity duration-250 hover:scale-105">
+        <i class="fa-solid fa-computer"></i>
+        <span
+          class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10 font-sans">
+          Connect to a device
+        </span>
+      </div>
+
+      <!-- volume -->
+      <div class="flex flex-wrap items-center">
+        <div class="group hover:text-white transition-opacity duration-250 hover:scale-105">
+          <i class="fa-solid fa-volume-low"></i>
+          <span
+            class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10 font-sans">
+            Volume
+          </span>
+        </div>
+
+        <div class="w-25"><input type="range" id="progress-bar" min="0" max="100" value="65"
+            class="w-full mx-2 h-[4px] bg-transparent cursor-pointer align-middle" /></div>
+      </div>
+
+      <!-- mini-player -->
+      <div class="group hover:text-white transition-opacity duration-250 hover:scale-105">
+        <i class="fa-regular fa-window-maximize"></i>
+        <span
+          class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10 font-sans">
+          Open Miniplayer
+        </span>
+      </div>
+
+      <!-- Full Screen -->
+      <div class="group hover:text-white transition-opacity duration-250 hover:scale-105">
+        <i class="fa-solid fa-expand"></i>
+        <span
+          class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10 font-sans">
+          Enter Full screen
+        </span>
+      </div>
+    </div>
 
   </footer>
 </body>
