@@ -4,26 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/5c4a0b1cae.js" crossorigin="anonymous"></script>
   <link href="./output.css" rel="stylesheet">
 
-  <script>
-    // for navbar on mobile
-    function toggleMenu() {
-      document.getElementById('nav-items').classList.toggle('hidden');
-    }
-
-    // for progress bar tracking
-    const slider = document.getElementById("progress-bar");
-
-    function updateProgressFill() {
-      const percent = (slider.value / slider.max) * 100;
-      slider.style.setProperty('--range-progress', `${percent}%`);
-    }
-
-    slider.addEventListener("input", updateProgressFill);
-    updateProgressFill();
-  </script>
+  <!-- javascript files -->
+  <script src="https://kit.fontawesome.com/5c4a0b1cae.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="bg-black">
@@ -140,24 +124,24 @@
 
 
   <!-- Center Section -->
-  <div class="relative mt-18 flex flex-wrap justify-center mb-23">
+  <div class="fixed mt-18 flex flex-wrap mb-2">
 
     <!-- left section of main body -->
-    <div class="relative flex flex-col items-center bg-[#121212] h-full w-auto rounded-t-xl">
+    <div class="relative flex flex-col items-center bg-[#121212] h-screen w-auto rounded-t-xl overflow-y-auto">
 
       <!-- top section - icons -->
       <div class="fixed z-20 flex flex-wrap flex-col gap-y-3.5 bg-[#121212] p-[25px] rounded-t-xl">
         <div class="group relative">
           <i class="fa-solid fa-bars text-[#b2b2b2] text-[25px]"></i>
-        <span
+          <span
             class="absolute top-1/2 left-13 -translate-y-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
             Open Your Library
           </span>
         </div>
-        
+
         <div class="group relative">
           <i class="fa-regular fa-square-plus text-[#b2b2b2] text-[25px]"></i>
-           <span
+          <span
             class="absolute top-1/2 left-13 -translate-y-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
             Create a playlist, folder or Jam
           </span>
@@ -274,7 +258,8 @@
           </span>
         </div>
 
-        <div class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center rounded-b-xl">
+        <div
+          class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center rounded-b-xl">
           <img src="./assets/sample14.png" alt="sample image" class="rounded-[4px] h-14 w-14">
           <span
             class="absolute top-1/2 left-20 -translate-y-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
@@ -282,8 +267,6 @@
             <div>Artist</div>
           </span>
         </div>
-
-
       </div>
     </div>
 
@@ -291,9 +274,109 @@
     <!-- middle section of main body -->
     <div></div>
 
+
     <!-- right section of main body -->
-    <div></div>
+    <div class="relative flex flex-col bg-[#121212] h-screen w-auto rounded-t-xl p-4 gap-y-3 overflow-y-auto">
+
+      <!-- moving text -->
+      <div id="wrapper" class="relative w-37 h-6 overflow-hidden bg-[rgb(18,18,18)] font-bold ml-2">
+        <p id="pingpongText"
+          class="absolute whitespace-nowrap text-white text-[16px] no-select hover:underline cursor:pointer hover:border-b-2">
+          Radha Ramanam Hare Hare
+        </p>
+      </div>
+
+      <!-- hover icons (top-right corner) -->
+      <div
+        class="relative items-start top-0.5 mt-7 left-45 -translate-y-1/2 hidden group-hover:block bg-transparent w-30 text-gray-300 text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+        <div class="flex flex-wrap items-center">
+          <div
+            class="hover:rounded-full hover:bg-[#1e1e1e] hover:text-white px-[10px] py-2 transition-opacity duration-200 opacity-0 group-hover:opacity-100 hover:scale-105">
+            <i class="fa-solid fa-ellipsis text-[20px]"></i>
+          </div>
+          <div class="hover:rounded-full hover:bg-[#1e1e1e] hover:text-white px-3 py-2">
+            <i
+              class="fa-solid fa-up-right-and-down-left-from-center text-[14px] transition-opacity duration-200 opacity-0 group-hover:opacity-100 hover:scale-107"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- sample image -->
+      <div>
+        <img src="./assets/sample15.png" alt="sample image" class="h-65 w-65 rounded-md">
+      </div>
+
+      <!-- Text with icons -->
+      <div class="flex flex-wrap justify-between">
+        <div class="flex flex-col items-start">
+          <div id="wrapper" class="relative w-45 h-9 overflow-hidden bg-[rgb(18,18,18)] font-bold">
+            <p id="pingpongText"
+              class="absolute whitespace-nowrap text-white text-[24px] no-select hover:underline cursor:pointer hover:border-b-2">
+              Radha Ramanam Hare Hare
+            </p>
+          </div>
+          <div class="text-[#9b9b9b]">Indresh Upadhyay</div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-x-4">
+          <div class="group relative">
+            <i
+              class="fa-solid fa-arrow-up-from-bracket text-[#858585] hover:text-white transform transition-transform duration-150 hover:scale-105"></i>
+            <span
+              class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10 font-sans">
+              Copy Link
+            </span>
+          </div>
+
+          <div class="group relative">
+            <i
+              class="fa-regular fa-square-plus text-[#858585] text-[19px] hover:text-white transform transition-transform duration-150 hover:scale-105"></i>
+            <span
+              class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 group-hover:opacity-100 z-10 font-sans">
+              Add
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Details - Card -->
+      <div class="bg-[#1f1f1f] rounded-[8px] p-4">
+        <div class="flex flex-wrap justify-between">
+          <div class="text-white font-bold text-[15px]">Credits</div>
+          <div
+            class="text-[#858585] font-bold text-[15px] cursor-pointer hover:text-white transition-opacity duration-200 group-hover:opacity-100 hover:scale-107 hover:underline hover:border-b hover:border-white">
+            Show all
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center">
+          <div class="w-45 text-[14px]">
+            <div class="text-white font-semibold">Indresh Upadhyay</div>
+            <div class="text-[#858585] font-semibold">Main Artist, Composer, Lyricist</div>
+          </div>
+          <div>
+            <button
+              class="rounded-full border border-[#858585] text-white font-semibold px-4 py-1 hover:scale-107 hover:border-white">
+              Follow
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-col items-start text-[14px] mt-2">
+          <div class="text-white font-semibold">Mir Desai</div>
+          <div class="text-[#858585] font-semibold">Arranger</div>
+        </div>
+      </div>
+
+      <!-- Extra elements - Card -->
+      <div></div>
+    </div>
+
+
+
+
+
   </div>
+
 
 
   <!-- footer section -->
@@ -483,6 +566,10 @@
     </div>
 
   </footer>
+
+
+  <script src="./js/movingtext.js"></script>
+  <script src="./js/progressbar.js"></script>
 </body>
 
 </html>
