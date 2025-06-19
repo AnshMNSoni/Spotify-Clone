@@ -29,7 +29,7 @@
 <body class="bg-black">
 
   <!-- navbar section -->
-  <nav class="fixed w-full bg-black py-3 px-4">
+  <nav class="top-0 left-0 fixed z-50 w-full bg-black py-3 px-4">
     <div class="flex items-center justify-between sm:hidden">
       <button onclick="toggleMenu()" class="text-white text-2xl">
         <i class="fa-solid fa-bars"></i>
@@ -140,12 +140,165 @@
 
 
   <!-- Center Section -->
-  <main></main>
+  <div class="relative mt-18 flex flex-wrap justify-center mb-23">
+
+    <!-- left section of main body -->
+    <div class="relative flex flex-col items-center bg-[#121212] h-full w-auto rounded-t-xl">
+
+      <!-- top section - icons -->
+      <div class="fixed z-20 flex flex-wrap flex-col gap-y-3.5 bg-[#121212] p-[25px] rounded-t-xl">
+        <div class="group relative">
+          <i class="fa-solid fa-bars text-[#b2b2b2] text-[25px]"></i>
+        <span
+            class="absolute top-1/2 left-13 -translate-y-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            Open Your Library
+          </span>
+        </div>
+        
+        <div class="group relative">
+          <i class="fa-regular fa-square-plus text-[#b2b2b2] text-[25px]"></i>
+           <span
+            class="absolute top-1/2 left-13 -translate-y-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            Create a playlist, folder or Jam
+          </span>
+        </div>
+      </div>
+
+      <!-- bottom section - cards -->
+      <div class="flex flex-col items-center relative mt-27">
+        <div class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center">
+          <img src="./assets/sample2.png" alt="sample image" class="rounded-[4px] h-14 w-14">
+          <span
+            class="absolute top-1/2 left-20 -translate-y-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <div class="text-white font-semibold text-[16px]">Liked Songs</div>
+            <div>Playlist • 7 songs</div>
+          </span>
+        </div>
+
+        <div class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center">
+          <img src="./assets/sample3.png" alt="sample image" class="rounded-[4px] h-14 w-14">
+          <span
+            class="absolute top-1/2 left-20 -translate-y-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <div class="text-white font-semibold text-[16px]">Santvani trivedi</div>
+            <div>Playlist • Ansh Soni</div>
+          </span>
+        </div>
+
+        <div class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center">
+          <img src="./assets/sample4.png" alt="sample image" class="rounded-[4px] h-14 w-14">
+          <span
+            class="absolute top-1/2 left-20 -translate-y-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <div class="text-white font-semibold text-[16px]">Kishore Kumar Top 50 songs</div>
+            <div>Playlist • Lyrics quotes</div>
+          </span>
+        </div>
+
+        <div class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center">
+          <img src="./assets/sample5.png" alt="sample image" class="rounded-[4px] h-14 w-14">
+          <span
+            class="absolute top-1/2 left-20 -translate-y-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <div class="text-white font-semibold text-[16px]">Arijit Singh</div>
+            <div>Artist</div>
+          </span>
+        </div>
+
+        <div class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center">
+          <img src="./assets/sample6.png" alt="sample image" class="rounded-[4px] h-14 w-14">
+          <span
+            class="absolute top-1/2 left-20 -translate-y-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <div class="text-white font-semibold text-[16px]">Vahal No Dariyo</div>
+            <div>Single • Aakash Parmar</div>
+          </span>
+        </div>
+
+        <div class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center">
+          <img src="./assets/sample7.png" alt="sample image" class="rounded-[4px] h-14 w-14">
+          <span
+            class="absolute top-1/2 left-20 -translate-y-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <div class="text-white font-semibold text-[16px]">Hariharan</div>
+            <div>Artist</div>
+          </span>
+        </div>
+
+        <div class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center">
+          <img src="./assets/sample8.png" alt="sample image" class="rounded-[4px] h-14 w-14">
+          <span
+            class="absolute top-1/2 left-20 -translate-y-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <div class="text-white font-semibold text-[16px]">Shreya Ghoshal</div>
+            <div>Artist</div>
+          </span>
+        </div>
+
+        <div class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center">
+          <img src="./assets/sample9.png" alt="sample image" class="rounded-[4px] h-14 w-14">
+          <span
+            class="absolute top-1/2 left-20 -translate-y-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <div class="text-white font-semibold text-[16px]">Asha Bhosle</div>
+            <div>Artist</div>
+          </span>
+        </div>
+
+        <div class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center">
+          <img src="./assets/sample10.png" alt="sample image" class="rounded-[4px] h-14 w-14">
+          <span
+            class="absolute top-1/2 left-20 -translate-y-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <div class="text-white font-semibold text-[16px]">Kishore Kumar</div>
+            <div>Artist</div>
+          </span>
+        </div>
+
+        <div class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center">
+          <img src="./assets/sample11.png" alt="sample image" class="rounded-[4px] h-14 w-14">
+          <span
+            class="absolute top-1/2 left-20 -translate-y-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <div class="text-white font-semibold text-[16px]">Kumar Sanu</div>
+            <div>Artist</div>
+          </span>
+        </div>
+
+        <div class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center">
+          <img src="./assets/sample12.png" alt="sample image" class="rounded-[4px] h-14 w-14">
+          <span
+            class="absolute top-1/2 left-20 -translate-y-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <div class="text-white font-semibold text-[16px]">Lata Mangeshkar</div>
+            <div>Artist</div>
+          </span>
+        </div>
+
+        <div class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center">
+          <img src="./assets/sample13.png" alt="sample image" class="rounded-[4px] h-14 w-14">
+          <span
+            class="absolute top-1/2 left-20 -translate-y-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <div class="text-white font-semibold text-[16px]">Mohammed Rafi</div>
+            <div>Artist</div>
+          </span>
+        </div>
+
+        <div class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center rounded-b-xl">
+          <img src="./assets/sample14.png" alt="sample image" class="rounded-[4px] h-14 w-14">
+          <span
+            class="absolute top-1/2 left-20 -translate-y-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <div class="text-white font-semibold text-[16px]">R.D. Burman</div>
+            <div>Artist</div>
+          </span>
+        </div>
+
+
+      </div>
+    </div>
+
+
+    <!-- middle section of main body -->
+    <div></div>
+
+    <!-- right section of main body -->
+    <div></div>
+  </div>
 
 
   <!-- footer section -->
   <footer
-    class="flex items-center justify-between fixed bottom-0 w-full h-22 border-white bg-black text-white text-center px-4 pb-4 pt-6">
+    class="flex items-center justify-between fixed z-50 bottom-0 w-full h-22 border-white bg-black text-white text-center px-4 pb-4 pt-6">
 
     <!-- left sub section -->
     <div class="flex flex-wrap items-center">
