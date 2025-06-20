@@ -5,13 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
-
-  <!-- javascript files -->
   <script src="https://kit.fontawesome.com/5c4a0b1cae.js" crossorigin="anonymous"></script>
+  <style>
+    /* Ensure flex children don't grow beyond their container */
+    .scroll-container {
+      min-height: 0;
+    }
+  </style>
 </head>
 
 <body class="bg-black">
-
   <!-- navbar section -->
   <nav class="top-0 left-0 fixed z-50 w-full bg-black py-3 px-4">
     <div class="flex items-center justify-between sm:hidden">
@@ -20,16 +23,11 @@
       </button>
       <img src="./assets/ansh.png" alt="profile" class="h-9 w-9 rounded-full">
     </div>
-
     <ul id="nav-items" class="flex-wrap items-center sm:flex sm:flex-nowrap sm:items-center sm:space-x-0 hidden">
-
-      <!-- Menu Icon -->
       <li
         class="text-[#d1d1d1] ml-5 text-[28px] hover:text-gray-100 transform transition-transform duration-300 hover:scale-110">
         <i class="fa-solid fa-ellipsis-vertical fa-rotate-90"></i>
       </li>
-
-      <!-- Arrows -->
       <li class="ml-10">
         <ul class="flex text-[24px] font-normal text-[#d1d1d1] space-x-3">
           <li class="hover:text-white transform transition-transform duration-200 hover:scale-110">
@@ -40,11 +38,8 @@
           </li>
         </ul>
       </li>
-
-      <!-- Right Section -->
       <li class="ml-auto w-full sm:w-auto">
         <ul class="flex flex-wrap sm:flex-nowrap items-center justify-end gap-y-2">
-
           <li
             class="group text-white bg-[#1f1f1f] text-[22px] rounded-full px-[12px] py-[8px] hover:bg-[#2a2a2a] hover:text-white transform transition-transform duration-200 hover:scale-105">
             <i class="fa-solid fa-house"></i>
@@ -53,28 +48,21 @@
               Home
             </span>
           </li>
-
-          <!-- Search -->
           <li class="text-[#d1d1d1] ml-2">
             <div class="flex items-center bg-[#1f1f1f] px-4 py-2.5 rounded-full">
               <i class="fa-solid fa-magnifying-glass text-[#d1d1d1] text-[20px] hover:text-white"></i>
-              <input type="text" placeholder="What do you want to play&#63;"
+              <input type="text" placeholder="What do you want to play?"
                 class="ml-3 bg-transparent outline-none text-white">
               <i
-                class="fa-regular fa-window-restore text-[#d1d1d1] text-[20px] ml-45 border-l-1 pl-3 hover:text-white transform transition-transform duration-200 hover:scale-110">
-              </i>
+                class="fa-regular fa-window-restore text-[#d1d1d1] text-[20px] ml-45 border-l-1 pl-3 hover:text-white transform transition-transform duration-200 hover:scale-110"></i>
             </div>
           </li>
-
-          <!-- Premium -->
           <li class="ml-2">
             <button
               class="bg-white font-bold text-[15px] rounded-full px-3.5 py-1 transform transition-transform duration-200 hover:scale-105">
               Explore Premium
             </button>
           </li>
-
-          <!-- Notification Icons -->
           <li
             class="group text-[#d1d1d1] hover:text-white ml-5.5 transform transition-transform duration-200 hover:scale-105">
             <i class="fa-solid fa-bell"></i>
@@ -83,7 +71,6 @@
               What's New
             </span>
           </li>
-
           <li
             class="group text-[#d1d1d1] hover:text-white ml-5.5 transform transition-transform duration-200 hover:scale-105">
             <i class="fa-solid fa-people-group"></i>
@@ -92,8 +79,6 @@
               Friend Activity
             </span>
           </li>
-
-          <!-- Profile -->
           <li class="group ml-[22px]">
             <div
               class="bg-[#1f1f1f] rounded-full hover:bg-[#2a2a2a] transform transition-transform duration-200 hover:scale-110">
@@ -104,8 +89,6 @@
               </span>
             </div>
           </li>
-
-          <!-- Window Controls -->
           <ul class="flex items-center">
             <li class="text-white text-[15px] ml-4 px-4 pb-[8px] hover:bg-[#3f3f3f]">
               <i class="fa-solid fa-window-minimize"></i>
@@ -121,33 +104,27 @@
       </li>
     </ul>
   </nav>
-
-
   <!-- Center Section -->
-  <div class="fixed mt-18 flex flex-wrap mb-2">
-
+  <div class="flex w-full h-[calc(100vh-144px)] mt-14 mb-22"> <!-- Adjusted for navbar (56px) and footer (88px) -->
     <!-- left section of main body -->
-    <div class="relative flex flex-col items-center bg-[#121212] h-screen w-auto rounded-t-xl overflow-y-auto">
-
+    <div class="relative flex flex-col items-center bg-[#121212] w-24 scroll-container rounded-t-xl overflow-y-auto">
       <!-- top section - icons -->
       <div class="fixed z-20 flex flex-wrap flex-col gap-y-3.5 bg-[#121212] p-[25px] rounded-t-xl">
         <div class="group relative">
-          <i class="fa-solid fa-bars text-[#b2b2b2] text-[25px]"></i>
+          <i class="fa-solid fa-bars text-[#b2b2b2] text-[16px]"></i>
           <span
             class="absolute top-1/2 left-13 -translate-y-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
             Open Your Library
           </span>
         </div>
-
         <div class="group relative">
-          <i class="fa-regular fa-square-plus text-[#b2b2b2] text-[25px]"></i>
+          <i class="fa-regular fa-square-plus text-[#b2b2b2] text-[16px]"></i>
           <span
             class="absolute top-1/2 left-13 -translate-y-1/2 hidden group-hover:block bg-[#2a2a2a] text-white text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
             Create a playlist, folder or Jam
           </span>
         </div>
       </div>
-
       <!-- bottom section - cards -->
       <div class="flex flex-col items-center relative mt-27">
         <div class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center">
@@ -158,7 +135,6 @@
             <div>Playlist • 7 songs</div>
           </span>
         </div>
-
         <div class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center">
           <img src="./assets/sample3.png" alt="sample image" class="rounded-[4px] h-14 w-14">
           <span
@@ -167,7 +143,6 @@
             <div>Playlist • Ansh Soni</div>
           </span>
         </div>
-
         <div class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center">
           <img src="./assets/sample4.png" alt="sample image" class="rounded-[4px] h-14 w-14">
           <span
@@ -176,7 +151,6 @@
             <div>Playlist • Lyrics quotes</div>
           </span>
         </div>
-
         <div class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center">
           <img src="./assets/sample5.png" alt="sample image" class="rounded-[4px] h-14 w-14">
           <span
@@ -185,7 +159,6 @@
             <div>Artist</div>
           </span>
         </div>
-
         <div class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center">
           <img src="./assets/sample6.png" alt="sample image" class="rounded-[4px] h-14 w-14">
           <span
@@ -194,7 +167,6 @@
             <div>Single • Aakash Parmar</div>
           </span>
         </div>
-
         <div class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center">
           <img src="./assets/sample7.png" alt="sample image" class="rounded-[4px] h-14 w-14">
           <span
@@ -203,7 +175,6 @@
             <div>Artist</div>
           </span>
         </div>
-
         <div class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center">
           <img src="./assets/sample8.png" alt="sample image" class="rounded-[4px] h-14 w-14">
           <span
@@ -212,7 +183,6 @@
             <div>Artist</div>
           </span>
         </div>
-
         <div class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center">
           <img src="./assets/sample9.png" alt="sample image" class="rounded-[4px] h-14 w-14">
           <span
@@ -221,7 +191,6 @@
             <div>Artist</div>
           </span>
         </div>
-
         <div class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center">
           <img src="./assets/sample10.png" alt="sample image" class="rounded-[4px] h-14 w-14">
           <span
@@ -230,7 +199,6 @@
             <div>Artist</div>
           </span>
         </div>
-
         <div class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center">
           <img src="./assets/sample11.png" alt="sample image" class="rounded-[4px] h-14 w-14">
           <span
@@ -239,7 +207,6 @@
             <div>Artist</div>
           </span>
         </div>
-
         <div class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center">
           <img src="./assets/sample12.png" alt="sample image" class="rounded-[4px] h-14 w-14">
           <span
@@ -248,7 +215,6 @@
             <div>Artist</div>
           </span>
         </div>
-
         <div class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center">
           <img src="./assets/sample13.png" alt="sample image" class="rounded-[4px] h-14 w-14">
           <span
@@ -257,7 +223,6 @@
             <div>Artist</div>
           </span>
         </div>
-
         <div
           class="group relative h-18 w-18 rounded-[4px] hover:bg-[#1b1b1b] flex items-center justify-center rounded-b-xl">
           <img src="./assets/sample14.png" alt="sample image" class="rounded-[4px] h-14 w-14">
@@ -267,25 +232,21 @@
             <div>Artist</div>
           </span>
         </div>
+        <div class="h-96"></div> <!-- Added to ensure content overflows for testing scroll -->
       </div>
     </div>
 
 
     <!-- middle section of main body -->
-    <div></div>
+    <div class="flex-1 bg-[#121212] scroll-container overflow-y-auto rounded-t-xl p-4">
+      <!-- Placeholder for middle section content -->
+      <div class="h-[1500px]"></div> <!-- Added to test scrolling -->
+    </div>
 
 
     <!-- right section of main body -->
-    <div class="relative flex flex-col bg-[#121212] h-screen w-auto rounded-t-xl p-4 gap-y-3 overflow-y-auto">
-
-      <!-- moving text -->
-      <div id="wrapper" class="relative w-37 h-6 overflow-hidden bg-[rgb(18,18,18)] font-bold ml-2">
-        <p id="pingpongText"
-          class="absolute whitespace-nowrap text-white text-[16px] no-select hover:underline cursor:pointer hover:border-b-2">
-          Radha Ramanam Hare Hare
-        </p>
-      </div>
-
+    <div class="relative flex flex-col bg-[#121212] w-80 scroll-container rounded-t-xl p-4 gap-y-3 overflow-y-auto">
+      
       <!-- hover icons (top-right corner) -->
       <div
         class="relative items-start top-0.5 mt-7 left-45 -translate-y-1/2 hidden group-hover:block bg-transparent w-30 text-gray-300 text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
@@ -300,24 +261,21 @@
           </div>
         </div>
       </div>
-
       <!-- sample image -->
       <div>
-        <img src="./assets/sample15.png" alt="sample image" class="h-65 w-65 rounded-md">
+        <img src="./assets/sample15.png" alt="sample image" class="h-68 w-70 rounded-md">
       </div>
-
       <!-- Text with icons -->
       <div class="flex flex-wrap justify-between">
-        <div class="flex flex-col items-start">
+        <div class="flex flex-col items-start ml-2">
           <div id="wrapper" class="relative w-45 h-9 overflow-hidden bg-[rgb(18,18,18)] font-bold">
             <p id="pingpongText"
-              class="absolute whitespace-nowrap text-white text-[24px] no-select hover:underline cursor:pointer hover:border-b-2">
+              class="absolute whitespace-nowrap text-white text-[24px] no-select hover:underline cursor-pointer hover:border-b-2">
               Radha Ramanam Hare Hare
             </p>
           </div>
           <div class="text-[#9b9b9b]">Indresh Upadhyay</div>
         </div>
-
         <div class="flex flex-wrap items-center gap-x-4">
           <div class="group relative">
             <i
@@ -327,7 +285,6 @@
               Copy Link
             </span>
           </div>
-
           <div class="group relative">
             <i
               class="fa-regular fa-square-plus text-[#858585] text-[19px] hover:text-white transform transition-transform duration-150 hover:scale-105"></i>
@@ -338,19 +295,17 @@
           </div>
         </div>
       </div>
-
       <!-- Details - Card -->
-      <div class="bg-[#1f1f1f] rounded-[8px] p-4">
+      <div class="flex flex-col bg-[#1f1f1f] rounded-[8px] p-4 gap-y-4">
         <div class="flex flex-wrap justify-between">
           <div class="text-white font-bold text-[15px]">Credits</div>
           <div
-            class="text-[#858585] font-bold text-[15px] cursor-pointer hover:text-white transition-opacity duration-200 group-hover:opacity-100 hover:scale-107 hover:underline hover:border-b hover:border-white">
+            class="text-[#858585] font-bold text-[15px] cursor-pointer hover:text-white transition-opacity duration-200 group-hover:opacity-100 hover:scale-107 hover:underline">
             Show all
           </div>
         </div>
-
         <div class="flex flex-wrap items-center">
-          <div class="w-45 text-[14px]">
+          <div class="w-35 text-[14px]">
             <div class="text-white font-semibold">Indresh Upadhyay</div>
             <div class="text-[#858585] font-semibold">Main Artist, Composer, Lyricist</div>
           </div>
@@ -366,26 +321,16 @@
           <div class="text-[#858585] font-semibold">Arranger</div>
         </div>
       </div>
-
       <!-- Extra elements - Card -->
-      <div></div>
+      <div class="h-96"></div> <!-- Added to ensure content overflows for testing scroll -->
     </div>
-
-
-
-
-
   </div>
-
 
 
   <!-- footer section -->
   <footer
-    class="flex items-center justify-between fixed z-50 bottom-0 w-full h-22 border-white bg-black text-white text-center px-4 pb-4 pt-6">
-
-    <!-- left sub section -->
+    class="flex items-center justify-between fixed z-50 bottom-0 w-full h-22 bg-black text-white text-center px-4 pb-4 pt-6">
     <div class="flex flex-wrap items-center">
-      <!-- sample image -->
       <div class="group">
         <img src="./assets/sample1.png" alt="sample image" class="h-14 w-14 rounded-[4px]">
         <span
@@ -393,16 +338,12 @@
           <i class="fa-solid fa-angle-down"></i>
         </span>
       </div>
-
-      <!-- text of sample image -->
       <div class="ml-4">
         <ul class="flex flex-col items-start">
           <li class="text-white text-[15px] font-semibold hover:underline"><a href="#">Radha Ramanam Hare Hare</a></li>
           <li class="text-[#858585] text-[13px] hover:text-white hover:underline"><a href="#">Indresh Upadhyay</a></li>
         </ul>
       </div>
-
-      <!-- add icon -->
       <div class="group ml-5">
         <i
           class="fa-regular fa-square-plus text-[#858585] text-[19px] hover:text-white transform transition-transform duration-150 hover:scale-105">
@@ -413,10 +354,7 @@
         </i>
       </div>
     </div>
-
-    <!-- middle sub section -->
     <div class="flex flex-col items-center">
-      <!-- top sub division -->
       <div class="flex justify center min-w-max">
         <ul class="flex flex-wrap items-center justify-center gap-x-6.5">
           <li class="text-[#939393] text-[18px] hover:text-white transition-opacity duration-250 hover:scale-110">
@@ -437,7 +375,6 @@
               </span>
             </button>
           </li>
-
           <li class="text-white text-[32px] transition-opacity duration-250 hover:scale-110">
             <button class="group relative" onclick="
       const iconhover = this.querySelector('i');
@@ -457,7 +394,6 @@
               </span>
             </button>
           </li>
-
           <li class="text-[#b3b3b3] text-[20px] hover:text-white transition-opacity duration-250 hover:scale-110">
             <button class="group">
               <i class="fa-solid fa-forward-step"></i>
@@ -467,7 +403,6 @@
               </span>
             </button>
           </li>
-
           <li class="text-[#939393] text-[18px] hover:text-white transition-opacity duration-250 hover:scale-110">
             <button class="group">
               <i class="fa-solid fa-repeat"></i>
@@ -479,24 +414,14 @@
           </li>
         </ul>
       </div>
-
-      <!-- bottom sub division -->
       <div class="flex items-center justify-between w-xl px-4 bg-black text-white text-[11px] font-normal">
-        <!-- Start Time -->
         <span id="start-time">11:50</span>
-
-        <!-- Slidable Progress Bar -->
         <input type="range" id="progress-bar" min="0" max="100" value="65"
           class="w-full mx-2 h-[4px] bg-transparent cursor-pointer" />
-
-        <!-- End Time -->
         <span id="end-time">14:44</span>
       </div>
     </div>
-
-    <!-- right sub section -->
     <div class="flex flex-wrap items-center gap-x-3.5 text-[#a7a7a7]">
-      <!-- playing view -->
       <div class="group border px-1 text-[11px] hover:text-white transition-opacity duration-250 hover:scale-105">
         <i class="fa-solid fa-play"></i>
         <span
@@ -504,8 +429,6 @@
           Now playing view
         </span>
       </div>
-
-      <!-- Lyrics -->
       <div class="group hover:text-white transition-opacity duration-250 hover:scale-105">
         <i class="fa-solid fa-music"></i>
         <span
@@ -513,8 +436,6 @@
           Lyrics
         </span>
       </div>
-
-      <!-- Queue -->
       <div class="group hover:text-white transition-opacity duration-250 hover:scale-105">
         <i class="fa-solid fa-layer-group"></i>
         <span
@@ -522,8 +443,6 @@
           Queue
         </span>
       </div>
-
-      <!-- connect to device -->
       <div class="group hover:text-white transition-opacity duration-250 hover:scale-105">
         <i class="fa-solid fa-computer"></i>
         <span
@@ -531,8 +450,6 @@
           Connect to a device
         </span>
       </div>
-
-      <!-- volume -->
       <div class="flex flex-wrap items-center pr-2">
         <div class="group hover:text-white transition-opacity duration-250 hover:scale-105">
           <i class="fa-solid fa-volume-low"></i>
@@ -541,12 +458,9 @@
             Volume
           </span>
         </div>
-
         <div class="w-25"><input type="range" id="progress-bar" min="0" max="100" value="65"
             class="w-full mx-2 h-[4px] bg-transparent cursor-pointer align-middle" /></div>
       </div>
-
-      <!-- mini-player -->
       <div class="group hover:text-white transition-opacity duration-250 hover:scale-105">
         <i class="fa-regular fa-window-maximize"></i>
         <span
@@ -554,8 +468,6 @@
           Open Miniplayer
         </span>
       </div>
-
-      <!-- Full Screen -->
       <div class="group hover:text-white transition-opacity duration-250 hover:scale-105">
         <i class="fa-solid fa-expand"></i>
         <span
@@ -564,10 +476,7 @@
         </span>
       </div>
     </div>
-
   </footer>
-
-
   <script src="./js/movingtext.js"></script>
   <script src="./js/progressbar.js"></script>
 </body>
