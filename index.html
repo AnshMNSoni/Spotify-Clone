@@ -104,8 +104,10 @@
       </li>
     </ul>
   </nav>
+
+
   <!-- Center Section -->
-  <div class="flex w-full h-[calc(100vh-144px)] mt-14 mb-22"> <!-- Adjusted for navbar (56px) and footer (88px) -->
+  <div class="flex w-full h-[calc(100vh-144px)] mt-14 mb-2 gap-x-4.5">
     <!-- left section of main body -->
     <div class="relative flex flex-col items-center bg-[#121212] w-24 scroll-container rounded-t-xl overflow-y-auto">
       <!-- top section - icons -->
@@ -232,21 +234,73 @@
             <div>Artist</div>
           </span>
         </div>
-        <div class="h-96"></div> <!-- Added to ensure content overflows for testing scroll -->
       </div>
     </div>
 
 
     <!-- middle section of main body -->
-    <div class="flex-1 bg-[#121212] scroll-container overflow-y-auto rounded-t-xl p-4">
-      <!-- Placeholder for middle section content -->
-      <div class="h-[1500px]"></div> <!-- Added to test scrolling -->
+    <div class="flex-1 bg-[#1f1f1f] scroll-container overflow-y-auto rounded-t-xl p-12">
+      <!-- All tabs -->
+      <div class="mb-5.5">
+        <ul class="flex flex-wrap items-center text-[14px] font-semibold gap-x-2">
+          <li class="text-black"><button
+              class="rounded-full px-3 py-1.5 border bg-white hover:bg-[#f0f0f0]">All</button></li>
+          <li><button
+              class="text-white rounded-full px-3 py-1.5 border hover:bg-[#f0f0f0] hover:text-black">Music</button></li>
+          <li><button
+              class="text-white rounded-full px-3 py-1.5 border hover:bg-[#f0f0f0] hover:text-black">Podcasts</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col gap-y-2">
+        <!-- first 4 tags -->
+        <div class="flex flex-wrap items-center gap-x-2">
+          <div class="flex flex-wrap items-center bg-[#262833] w-54 gap-x-2">
+            <div><img src="./assets/sample5.png" alt="sample image" class="h-12 w-12 rounded-full"></div>
+            <div class="text-white font-bold text-[13px]">Arijit Singh all Songs ❤️</div>
+          </div>
+          <div class="flex flex-wrap items-center bg-[#262833] w-54 gap-x-2">
+            <div><img src="./assets/sample5.png" alt="sample image" class="h-12 w-12 rounded-full"></div>
+            <div class="text-white font-bold text-[13px]">Arijit Singh all Songs ❤️</div>
+          </div>
+          <div class="flex flex-wrap items-center bg-[#262833] w-54 gap-x-2">
+            <div><img src="./assets/sample5.png" alt="sample image" class="h-12 w-12 rounded-full"></div>
+            <div class="text-white font-bold text-[13px]">Arijit Singh all Songs ❤️</div>
+          </div>
+          <div class="flex flex-wrap items-center bg-[#262833] w-54 gap-x-2">
+            <div><img src="./assets/sample5.png" alt="sample image" class="h-12 w-12 rounded-full"></div>
+            <div class="text-white font-bold text-[13px]">Arijit Singh all Songs ❤️</div>
+          </div>
+        </div>
+
+        <!-- next 4 tags -->
+        <div class="flex flex-wrap items-center gap-x-2">
+          <div class="flex flex-wrap items-center bg-[#262833] w-54 gap-x-2">
+            <div><img src="./assets/sample5.png" alt="sample image" class="h-12 w-12 rounded-full"></div>
+            <div class="text-white font-bold text-[13px]">Arijit Singh all Songs ❤️</div>
+          </div>
+          <div class="flex flex-wrap items-center bg-[#262833] w-54 gap-x-2">
+            <div><img src="./assets/sample5.png" alt="sample image" class="h-12 w-12 rounded-full"></div>
+            <div class="text-white font-bold text-[13px]">Arijit Singh all Songs ❤️</div>
+          </div>
+          <div class="flex flex-wrap items-center bg-[#262833] w-54 gap-x-2">
+            <div><img src="./assets/sample5.png" alt="sample image" class="h-12 w-12 rounded-full"></div>
+            <div class="text-white font-bold text-[13px]">Arijit Singh all Songs ❤️</div>
+          </div>
+          <div class="flex flex-wrap items-center bg-[#262833] w-54 gap-x-2">
+            <div><img src="./assets/sample5.png" alt="sample image" class="h-12 w-12 rounded-full"></div>
+            <div class="text-white font-bold text-[13px]">Arijit Singh all Songs ❤️</div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
 
     <!-- right section of main body -->
     <div class="relative flex flex-col bg-[#121212] w-80 scroll-container rounded-t-xl p-4 gap-y-3 overflow-y-auto">
-      
+
       <!-- hover icons (top-right corner) -->
       <div
         class="relative items-start top-0.5 mt-7 left-45 -translate-y-1/2 hidden group-hover:block bg-transparent w-30 text-gray-300 text-sm px-2 py-1 rounded-md whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
