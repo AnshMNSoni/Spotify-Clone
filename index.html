@@ -5,11 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/assets/spotify-logo.ico">
   <script src="https://kit.fontawesome.com/5c4a0b1cae.js" crossorigin="anonymous"></script>
   <style>
-    /* Ensure flex children don't grow beyond their container */
     .scroll-container {
       min-height: 0;
+    }
+  </style>
+
+  <style>
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
     }
   </style>
 </head>
@@ -109,7 +120,8 @@
   <!-- Center Section -->
   <div class="flex w-full h-[calc(100vh-144px)] mt-14 mb-2 gap-x-4.5">
     <!-- left section of main body -->
-    <div class="relative flex flex-col items-center bg-[#121212] w-24 scroll-container rounded-t-xl overflow-y-auto">
+    <div
+      class="relative flex flex-col items-center bg-[#121212] w-24 scroll-container rounded-t-xl overflow-y-auto overflow-x-hidden">
       <!-- top section - icons -->
       <div class="fixed z-20 flex flex-wrap flex-col gap-y-3.5 bg-[#121212] p-[25px] rounded-t-xl">
         <div class="group relative">
@@ -239,9 +251,9 @@
 
 
     <!-- middle section of main body -->
-    <div class="flex-1 bg-[#1f1f1f] scroll-container overflow-y-auto rounded-t-xl p-12">
+    <div class="flex-1 flex-col bg-[#121212] scroll-container overflow-y-auto rounded-t-xl p-10 space-y-5">
       <!-- All tabs -->
-      <div class="mb-5.5">
+      <div>
         <ul class="flex flex-wrap items-center text-[14px] font-semibold gap-x-2">
           <li class="text-black"><button
               class="rounded-full px-3 py-1.5 border bg-white hover:bg-[#f0f0f0]">All</button></li>
@@ -256,45 +268,340 @@
       <div class="flex flex-col gap-y-2">
         <!-- first 4 tags -->
         <div class="flex flex-wrap items-center gap-x-2">
-          <div class="flex flex-wrap items-center bg-[#262833] w-54 gap-x-2">
+          <div class="group flex flex-wrap items-center bg-[#262833] w-54 gap-x-2 rounded-md hover:bg-[#445356]">
             <div><img src="./assets/sample5.png" alt="sample image" class="h-12 w-12 rounded-full"></div>
             <div class="text-white font-bold text-[13px]">Arijit Singh all Songs ❤️</div>
+            <div
+              class="relative left-20 mt-[-48px] ml-[100px] hidden group-hover:block bg-[#2a2a2a] text-white text-sm rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+              <button class="bg-[#3ae176] rounded-full py-1 px-2.5 text-black"><i class="fa-solid fa-play"></i></button>
+            </div>
           </div>
-          <div class="flex flex-wrap items-center bg-[#262833] w-54 gap-x-2">
-            <div><img src="./assets/sample5.png" alt="sample image" class="h-12 w-12 rounded-full"></div>
-            <div class="text-white font-bold text-[13px]">Arijit Singh all Songs ❤️</div>
+          <div class="group flex flex-wrap items-center bg-[#262833] w-54 gap-x-2 rounded-md hover:bg-[#445356]">
+            <div><img src="./assets/sample3.png" alt="sample image" class="h-12 w-12"></div>
+            <div class="text-white font-bold text-[13px]">Santvani trivedi</div>
+            <div
+              class="relative left-20 mt-[-48px] ml-[100px] hidden group-hover:block bg-[#2a2a2a] text-white text-sm rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+              <button class="bg-[#3ae176] rounded-full py-1 px-2.5 text-black"><i class="fa-solid fa-play"></i></button>
+            </div>
           </div>
-          <div class="flex flex-wrap items-center bg-[#262833] w-54 gap-x-2">
-            <div><img src="./assets/sample5.png" alt="sample image" class="h-12 w-12 rounded-full"></div>
-            <div class="text-white font-bold text-[13px]">Arijit Singh all Songs ❤️</div>
+          <div class="group flex flex-wrap items-center bg-[#262833] w-54 gap-x-2 rounded-md hover:bg-[#445356]">
+            <div><img src="./assets/sample4.png" alt="sample image" class="h-12 w-12 rounded-full"></div>
+            <div class="text-white font-bold text-[13px]">Kishore kumar Songs</div>
+            <div
+              class="relative left-20 mt-[-48px] ml-[100px] hidden group-hover:block bg-[#2a2a2a] text-white text-sm rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+              <button class="bg-[#3ae176] rounded-full py-1 px-2.5 text-black"><i class="fa-solid fa-play"></i></button>
+            </div>
           </div>
-          <div class="flex flex-wrap items-center bg-[#262833] w-54 gap-x-2">
-            <div><img src="./assets/sample5.png" alt="sample image" class="h-12 w-12 rounded-full"></div>
-            <div class="text-white font-bold text-[13px]">Arijit Singh all Songs ❤️</div>
+          <div class="group flex flex-wrap items-center bg-[#262833] w-54 gap-x-2 rounded-md hover:bg-[#445356]">
+            <div><img src="./assets/sample1.png" alt="sample image" class="h-12 w-12 rounded-full"></div>
+            <div class="text-white font-bold text-[13px]">Indresh Upadhyay</div>
+            <div
+              class="relative left-20 mt-[-48px] ml-[100px] hidden group-hover:block bg-[#2a2a2a] text-white text-sm rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+              <button class="bg-[#3ae176] rounded-full py-1 px-2.5 text-black"><i class="fa-solid fa-play"></i></button>
+            </div>
           </div>
         </div>
 
         <!-- next 4 tags -->
         <div class="flex flex-wrap items-center gap-x-2">
-          <div class="flex flex-wrap items-center bg-[#262833] w-54 gap-x-2">
-            <div><img src="./assets/sample5.png" alt="sample image" class="h-12 w-12 rounded-full"></div>
-            <div class="text-white font-bold text-[13px]">Arijit Singh all Songs ❤️</div>
+          <div class="group flex flex-wrap items-center bg-[#262833] w-54 gap-x-2 rounded-md hover:bg-[#445356]">
+            <div><img src="./assets/sample17.png" alt="sample image" class="h-12 w-12 rounded-full"></div>
+            <div class="text-white font-bold text-[13px]">Parampara Tandon</div>
+            <div
+              class="relative left-20 mt-[-48px] ml-[100px] hidden group-hover:block bg-[#2a2a2a] text-white text-sm rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+              <button class="bg-[#3ae176] rounded-full py-1 px-2.5 text-black"><i class="fa-solid fa-play"></i></button>
+            </div>
           </div>
-          <div class="flex flex-wrap items-center bg-[#262833] w-54 gap-x-2">
-            <div><img src="./assets/sample5.png" alt="sample image" class="h-12 w-12 rounded-full"></div>
-            <div class="text-white font-bold text-[13px]">Arijit Singh all Songs ❤️</div>
+          <div class="group flex flex-wrap items-center bg-[#262833] w-54 gap-x-2 rounded-md hover:bg-[#445356]">
+            <div><img src="./assets/sample8.png" alt="sample image" class="h-12 w-12 rounded-full"></div>
+            <div class="text-white font-bold text-[13px]">Shreya Ghoshal Songs</div>
+            <div
+              class="relative left-20 mt-[-48px] ml-[100px] hidden group-hover:block bg-[#2a2a2a] text-white text-sm rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+              <button class="bg-[#3ae176] rounded-full py-1 px-2.5 text-black"><i class="fa-solid fa-play"></i></button>
+            </div>
           </div>
-          <div class="flex flex-wrap items-center bg-[#262833] w-54 gap-x-2">
-            <div><img src="./assets/sample5.png" alt="sample image" class="h-12 w-12 rounded-full"></div>
-            <div class="text-white font-bold text-[13px]">Arijit Singh all Songs ❤️</div>
+          <div class="group flex flex-wrap items-center bg-[#262833] w-54 gap-x-2 rounded-md hover:bg-[#445356]">
+            <div><img src="./assets/sample11.png" alt="sample image" class="h-12 w-12 rounded-full"></div>
+            <div class="text-white font-bold text-[13px]">Kumar Sanu Hits ❤️</div>
+            <div
+              class="relative left-20 mt-[-48px] ml-[100px] hidden group-hover:block bg-[#2a2a2a] text-white text-sm rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+              <button class="bg-[#3ae176] rounded-full py-1 px-2.5 text-black"><i class="fa-solid fa-play"></i></button>
+            </div>
           </div>
-          <div class="flex flex-wrap items-center bg-[#262833] w-54 gap-x-2">
-            <div><img src="./assets/sample5.png" alt="sample image" class="h-12 w-12 rounded-full"></div>
-            <div class="text-white font-bold text-[13px]">Arijit Singh all Songs ❤️</div>
+          <div class="group flex flex-wrap items-center bg-[#262833] w-54 gap-x-2 rounded-md hover:bg-[#445356]">
+            <div><img src="./assets/sample12.png" alt="sample image" class="h-12 w-12 rounded-full"></div>
+            <div class="text-white font-bold text-[13px]">Lata Mangeshkar</div>
+            <div
+              class="relative left-20 mt-[-48px] ml-[100px] hidden group-hover:block bg-[#2a2a2a] text-white text-sm rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+              <button class="bg-[#3ae176] rounded-full py-1 px-2.5 text-black"><i class="fa-solid fa-play"></i></button>
+            </div>
           </div>
         </div>
       </div>
 
+      <div class="flex flex-col flex-wrap items-start">
+        <div class="text-[13px] text-[#9a9999] cursor-pointer">Made For</div>
+        <div class="flex flex-wrap w-220">
+          <div class="text-2xl text-white hover:underline font-bold cursor-pointer">Ansh Soni</div>
+          <div class="ml-auto"><button class="text-[#9a9999] text-[15px] hover:underline font-bold">Show all</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- All songs Card Carousel -->
+      <div class="snap-x flex overflow-x-auto whitespace-nowrap ml-[-10px] hide-scrollbar mt-[-20px]">
+        <div
+          class="group snap-center flex flex-col items-start rounded-md font-semibold text-[15px] text-[#7e7e7e] hover:bg-[#1f1f1f] w-48 h-62 cursor-pointer p-3">
+          <div><img src="/assets/sample16.png" class="h-42 w-43 rounded-md mb-3" /></div>
+          <div class="w-41">Ram Kumar Lakha,</div>
+          <div class="truncate w-41 mt-[-5px]">Hansraj Raghuwanshi and more</div>
+          <div
+            class="relative left-20 mt-[-100px] ml-[35px] hidden group-hover:block bg-[#2a2a2a] text-white rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <button class="bg-[#3ae176] rounded-full py-2 px-4 text-black text-xl"><i
+                class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+
+        <div
+          class="group snap-center flex flex-col items-start rounded-md font-semibold text-[15px] text-[#7e7e7e] hover:bg-[#1f1f1f] w-48 h-62 cursor-pointer p-3">
+          <div><img src="/assets/sample18.png" class="h-42 w-43 rounded-md mb-3" /></div>
+          <div class="w-41">Sachin-Jigar, Santvani</div>
+          <div class="truncate w-41 mt-[-5px]">Trivedi, Jigardan Gadhavi and many more</div>
+          <div
+            class="relative left-20 mt-[-100px] ml-[35px] hidden group-hover:block bg-[#2a2a2a] text-white rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <button class="bg-[#3ae176] rounded-full py-2 px-4 text-black text-xl"><i
+                class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+
+        <div
+          class="group snap-center flex flex-col items-start rounded-md font-semibold text-[15px] text-[#7e7e7e] hover:bg-[#1f1f1f] w-48 h-62 cursor-pointer p-3">
+          <div><img src="/assets/sample20.png" class="h-42 w-43 rounded-md mb-3" /></div>
+          <div class="w-41">Kishore Kumar, Abhijeet,</div>
+          <div class="truncate w-41 mt-[-5px]">Kumar Sanu and more</div>
+          <div
+            class="relative left-20 mt-[-100px] ml-[35px] hidden group-hover:block bg-[#2a2a2a] text-white rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <button class="bg-[#3ae176] rounded-full py-2 px-4 text-black text-xl"><i
+                class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+
+        <div
+          class="group snap-center flex flex-col items-start rounded-md font-semibold text-[15px] text-[#7e7e7e] hover:bg-[#1f1f1f] w-48 h-62 cursor-pointer p-3">
+          <div><img src="/assets/sample19.png" class="h-42 w-43 rounded-md mb-3" /></div>
+          <div class="w-41">Pritam, Himesh</div>
+          <div class="truncate w-41 mt-[-5px]">Reshammiya, Shankar Mahadeva and more</div>
+          <div
+            class="relative left-20 mt-[-100px] ml-[35px] hidden group-hover:block bg-[#2a2a2a] text-white rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <button class="bg-[#3ae176] rounded-full py-2 px-4 text-black text-xl"><i
+                class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+
+        <div
+          class="group snap-center flex flex-col items-start rounded-md font-semibold text-[15px] text-[#7e7e7e] hover:bg-[#1f1f1f] w-48 h-62 cursor-pointer p-3">
+          <div><img src="/assets/sample21.png" class="h-42 w-43 rounded-md mb-3" /></div>
+          <div class="w-41">Himesh Reshammiya,</div>
+          <div class="truncate w-41 mt-[-5px]">Madan Mohan, Bappi Laheri and more</div>
+          <div
+            class="relative left-20 mt-[-100px] ml-[35px] hidden group-hover:block bg-[#2a2a2a] text-white rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <button class="bg-[#3ae176] rounded-full py-2 px-4 text-black text-xl"><i
+                class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+
+        <div
+          class="group snap-center flex flex-col items-start rounded-md font-semibold text-[15px] text-[#7e7e7e] hover:bg-[#1f1f1f] w-48 h-62 cursor-pointer p-3">
+          <div><img src="/assets/sample22.png" class="h-42 w-43 rounded-md mb-3" /></div>
+          <div class="w-41">Sachit Tandon, Jasmine</div>
+          <div class="truncate w-41 mt-[-5px]">Sandlas, Sachin-Jigar and more</div>
+          <div
+            class="relative left-20 mt-[-100px] ml-[35px] hidden group-hover:block bg-[#2a2a2a] text-white rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <button class="bg-[#3ae176] rounded-full py-2 px-4 text-black text-xl"><i
+                class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap w-220">
+        <div class="text-2xl text-white hover:underline font-bold cursor-pointer">Recently Played</div>
+        <div class="ml-auto"><button class="text-[#9a9999] text-[15px] hover:underline font-bold cursor-pointer">Show all</button>
+        </div>
+      </div>
+
+      <!-- All songs Card Carousel -->
+      <div class="snap-x flex overflow-x-auto whitespace-nowrap ml-[-10px] hide-scrollbar mt-[-20px]">
+        <div
+          class="group snap-center flex flex-col items-start rounded-md font-semibold text-[15px] text-[#7e7e7e] hover:bg-[#1f1f1f] w-48 h-62 cursor-pointer p-3">
+          <div><img src="/assets/sample23.png" class="h-42 w-43 rounded-md mb-3" /></div>
+          <div class="w-41">Santvani Trivedi</div>
+          <div
+            class="relative left-20 mt-[-100px] ml-[35px] hidden group-hover:block bg-[#2a2a2a] text-white rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <button class="bg-[#3ae176] rounded-full py-2 px-4 text-black text-xl"><i
+                class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+
+        <div
+          class="group snap-center flex flex-col items-start rounded-md font-semibold text-[15px] text-[#7e7e7e] hover:bg-[#1f1f1f] w-48 h-62 cursor-pointer p-3">
+          <div><img src="/assets/sample24.png" class="h-42 w-43 rounded-md mb-3" /></div>
+          <div class="w-41">Radha Ramanam</div>
+          <div class="truncate w-41 mt-[-5px]">Hare Hare</div>
+          <div
+            class="relative left-20 mt-[-100px] ml-[35px] hidden group-hover:block bg-[#2a2a2a] text-white rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <button class="bg-[#3ae176] rounded-full py-2 px-4 text-black text-xl"><i
+                class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+
+        <div
+          class="group snap-center flex flex-col items-start rounded-md font-semibold text-[15px] text-[#7e7e7e] hover:bg-[#1f1f1f] w-48 h-62 cursor-pointer p-3">
+          <div><img src="/assets/sample19.png" class="h-42 w-43 rounded-md mb-3" /></div>
+          <div class="w-41">Daily Mix 4</div>
+          <div
+            class="relative left-20 mt-[-100px] ml-[35px] hidden group-hover:block bg-[#2a2a2a] text-white rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <button class="bg-[#3ae176] rounded-full py-2 px-4 text-black text-xl"><i
+                class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+
+        <div
+          class="group snap-center flex flex-col items-start rounded-md font-semibold text-[15px] text-[#7e7e7e] hover:bg-[#1f1f1f] w-48 h-62 cursor-pointer p-3">
+          <div><img src="/assets/sample25.png" class="h-42 w-43 rounded-md mb-3" /></div>
+          <div class="w-41">Arijit Singh All Songs ❤️</div>
+          <div
+            class="relative left-20 mt-[-100px] ml-[35px] hidden group-hover:block bg-[#2a2a2a] text-white rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <button class="bg-[#3ae176] rounded-full py-2 px-4 text-black text-xl"><i
+                class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+
+        <div
+          class="group snap-center flex flex-col items-start rounded-md font-semibold text-[15px] text-[#7e7e7e] hover:bg-[#1f1f1f] w-48 h-62 cursor-pointer p-3">
+          <div><img src="/assets/sample26.png" class="h-42 w-43 rounded-md mb-3" /></div>
+          <div class="w-41">Parampara Tandon</div>
+          <div
+            class="relative left-20 mt-[-100px] ml-[35px] hidden group-hover:block bg-[#2a2a2a] text-white rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <button class="bg-[#3ae176] rounded-full py-2 px-4 text-black text-xl"><i
+                class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+
+        <div
+          class="group snap-center flex flex-col items-start rounded-md font-semibold text-[15px] text-[#7e7e7e] hover:bg-[#1f1f1f] w-48 h-62 cursor-pointer p-3">
+          <div><img src="/assets/sample27.png" class="h-42 w-43 rounded-md mb-3" /></div>
+          <div class="w-41">Engergetic Bollywood</div>
+          <div class="turncate w-41 mt-[-5px]">Songs</div>
+          <div
+            class="relative left-20 mt-[-100px] ml-[35px] hidden group-hover:block bg-[#2a2a2a] text-white rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <button class="bg-[#3ae176] rounded-full py-2 px-4 text-black text-xl"><i
+                class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+
+        <div
+          class="group snap-center flex flex-col items-start rounded-md font-semibold text-[15px] text-[#7e7e7e] hover:bg-[#1f1f1f] w-48 h-62 cursor-pointer p-3">
+          <div><img src="/assets/sample28.png" class="h-42 w-43 rounded-md mb-3" /></div>
+          <div class="w-41">Devraj Bha Gandhvi</div>
+          <div
+            class="relative left-20 mt-[-100px] ml-[35px] hidden group-hover:block bg-[#2a2a2a] text-white rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <button class="bg-[#3ae176] rounded-full py-2 px-4 text-black text-xl"><i
+                class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap w-220">
+        <div class="text-2xl text-white hover:underline font-bold cursor-pointer">Your top mixes</div>
+        <div class="ml-auto"><button class="text-[#9a9999] text-[15px] hover:underline font-bold">Show all</button>
+        </div>
+      </div>
+
+      <!-- All songs Card Carousel -->
+      <div class="snap-x flex overflow-x-auto whitespace-nowrap ml-[-10px] hide-scrollbar mt-[-20px]">
+        <div
+          class="group snap-center flex flex-col items-start rounded-md font-semibold text-[15px] text-[#7e7e7e] hover:bg-[#1f1f1f] w-48 h-62 cursor-pointer p-3">
+          <div><img src="/assets/sample29.png" class="h-42 w-43 rounded-md mb-3" /></div>
+          <div class="w-41">Shaan, Himesh</div>
+          <div class="turncate w-41 mt-[-5px]">Reshammiya and more</div>
+          <div
+            class="relative left-20 mt-[-100px] ml-[35px] hidden group-hover:block bg-[#2a2a2a] text-white rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <button class="bg-[#3ae176] rounded-full py-2 px-4 text-black text-xl"><i
+                class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+
+        <div
+          class="group snap-center flex flex-col items-start rounded-md font-semibold text-[15px] text-[#7e7e7e] hover:bg-[#1f1f1f] w-48 h-62 cursor-pointer p-3">
+          <div><img src="/assets/sample30.png" class="h-42 w-43 rounded-md mb-3" /></div>
+          <div class="w-41">Rasraj Ji Maharaj,</div>
+          <div class="truncate w-41 mt-[-5px]">Lakhbi Singh Lakha and more</div>
+          <div
+            class="relative left-20 mt-[-100px] ml-[35px] hidden group-hover:block bg-[#2a2a2a] text-white rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <button class="bg-[#3ae176] rounded-full py-2 px-4 text-black text-xl"><i
+                class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+
+        <div
+          class="group snap-center flex flex-col items-start rounded-md font-semibold text-[15px] text-[#7e7e7e] hover:bg-[#1f1f1f] w-48 h-62 cursor-pointer p-3">
+          <div><img src="/assets/sample31.png" class="h-42 w-43 rounded-md mb-3" /></div>
+          <div class="w-41">Kumar Sanu, Arijit Singh</div>
+          <div class="truncate w-41 mt-[-5px]">and more</div>
+          <div
+            class="relative left-20 mt-[-100px] ml-[35px] hidden group-hover:block bg-[#2a2a2a] text-white rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <button class="bg-[#3ae176] rounded-full py-2 px-4 text-black text-xl"><i
+                class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+
+        <div
+          class="group snap-center flex flex-col items-start rounded-md font-semibold text-[15px] text-[#7e7e7e] hover:bg-[#1f1f1f] w-48 h-62 cursor-pointer p-3">
+          <div><img src="/assets/sample32.png" class="h-42 w-43 rounded-md mb-3" /></div>
+          <div class="w-41">A.R. Rahman, Sohil Sen</div>
+          <div class="truncate w-41 mt-[-5px]">Shaan and more</div>
+          <div
+            class="relative left-20 mt-[-100px] ml-[35px] hidden group-hover:block bg-[#2a2a2a] text-white rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <button class="bg-[#3ae176] rounded-full py-2 px-4 text-black text-xl"><i
+                class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+
+        <div
+          class="group snap-center flex flex-col items-start rounded-md font-semibold text-[15px] text-[#7e7e7e] hover:bg-[#1f1f1f] w-48 h-62 cursor-pointer p-3">
+          <div><img src="/assets/sample33.png" class="h-42 w-43 rounded-md mb-3" /></div>
+          <div class="w-41">Hariharan, Harish</div>
+          <div class="truncate w-41 mt-[-5px]">Raghavendra and more</div>
+          <div
+            class="relative left-20 mt-[-100px] ml-[35px] hidden group-hover:block bg-[#2a2a2a] text-white rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <button class="bg-[#3ae176] rounded-full py-2 px-4 text-black text-xl"><i
+                class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+
+        <div
+          class="group snap-center flex flex-col items-start rounded-md font-semibold text-[15px] text-[#7e7e7e] hover:bg-[#1f1f1f] w-48 h-62 cursor-pointer p-3">
+          <div><img src="/assets/sample22.png" class="h-42 w-43 rounded-md mb-3" /></div>
+          <div class="w-41">Sachit Tandon, Jasmine</div>
+          <div class="truncate w-41 mt-[-5px]">Sandlas, Sachin-Jigar and more</div>
+          <div
+            class="relative left-20 mt-[-100px] ml-[35px] hidden group-hover:block bg-[#2a2a2a] text-white rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <button class="bg-[#3ae176] rounded-full py-2 px-4 text-black text-xl"><i
+                class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+
+        <div
+          class="group snap-center flex flex-col items-start rounded-md font-semibold text-[15px] text-[#7e7e7e] hover:bg-[#1f1f1f] w-48 h-62 cursor-pointer p-3">
+          <div><img src="/assets/sample28.png" class="h-42 w-43 rounded-md mb-3" /></div>
+          <div class="w-41">Devraj Bha Gandhvi</div>
+          <div
+            class="relative left-20 mt-[-100px] ml-[35px] hidden group-hover:block bg-[#2a2a2a] text-white rounded-full whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover:opacity-100 z-10">
+            <button class="bg-[#3ae176] rounded-full py-2 px-4 text-black text-xl"><i
+                class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+      </div>
     </div>
 
 
