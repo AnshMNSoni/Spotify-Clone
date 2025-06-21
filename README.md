@@ -70,9 +70,9 @@ spotify-clone/
 - Contributions are always welcome!
 - If you find any bugs or have suggestions for improvement, feel free to fork the repo and submit a pull request. ⭐
 
-## 🎉 Credits: Spotify
-
 ## 🔗 Connect with Me:
 #### `GitHub` - [Visit](https://github.com/AnshMNSoni) | `LinkedIn` - [Visit](https://linkedin.com/in/anshsoni) | `Follow Us` - [Visit](https://linkedin.com/company/py-shell)
+
+### 🎉 Credits: Spotify
 
 ### Thank you ✨
