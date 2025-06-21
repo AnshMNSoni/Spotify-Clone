@@ -4,8 +4,6 @@ Welcome to my **Spotify Clone** – a fully responsive frontend replica of the p
 
 This project was created to sharpen my frontend development skills and explore how complex user interfaces like Spotify's can be recreated using modern web technologies.
 
----
-
 ## 🚀 Features
 
 - 🎧 Beautiful and clean UI inspired by Spotify  
@@ -14,21 +12,15 @@ This project was created to sharpen my frontend development skills and explore h
 - 🔥 Tailwind CSS used for rapid and efficient styling  
 - 🧠 JavaScript functionality for basic interactivity
 
----
-
 ## 🛠️ Tech Stack
 
 - **HTML** - Structuring the layout  
 - **Tailwind CSS** - Styling with utility-first classes  
 - **JavaScript** - Adding interactivity and behavior
 
----
-
 ## 📸 Screenshots
 
 ![Screenshot 2025-06-21 141100](https://github.com/user-attachments/assets/b3b9c0be-f969-45e3-ba19-c3cd222d7e2d)
-
----
 
 ## Project Structure
 
@@ -78,3 +70,9 @@ spotify-clone/
 - Contributions are always welcome!
 - If you find any bugs or have suggestions for improvement, feel free to fork the repo and submit a pull request. ⭐
 
+## 🎉 Credits: Spotify
+
+## 🔗 Connect with Me:
+#### `GitHub` - [Visit](https://github.com/AnshMNSoni) | `LinkedIn` - [Visit](https://linkedin.com/in/anshsoni) | `Follow Us` - [Visit](https://linkedin.com/company/py-shell)
+
+### Thank you ✨
